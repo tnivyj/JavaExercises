@@ -44,17 +44,12 @@ public class Main {
 							break;
 						}
 						houxu.push(fuhao.pop());
-//						fuhao.push(input[i]);
 					}
 				}
         	}
         	while(fuhao.isEmpty() == false){
         		houxu.push(fuhao.pop());
         	}
-//        	for(int i = 0; i < houxu.size(); i++){
-//        		System.out.print(houxu.get(i) + " ");
-//        	}
-//        	System.out.println();
         	Stack<BigDecimal> compute = new Stack<BigDecimal>();
         	for(int i = 0; i < houxu.size(); i++){
         		if(!sign.containsKey(houxu.get(i))){
@@ -65,7 +60,6 @@ public class Main {
         			BigDecimal y = compute.pop();
         			BigDecimal xx = x.multiply(x);
         			BigDecimal yy = y.multiply(y);
-//        			BigDecimal result;
         			switch(houxu.get(i)){
         			case "+":
         				compute.push(yy.add(xx));
